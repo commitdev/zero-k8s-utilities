@@ -18,3 +18,4 @@ RUN apk add --no-cache \
     && rm -rf /var/cache/apk/* \
     siege.config
 
+RUN apk --no-cache add wireguard-tools
