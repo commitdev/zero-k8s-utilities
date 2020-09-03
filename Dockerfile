@@ -14,8 +14,6 @@ FROM alpine:3.12
 
 COPY --from=build /usr/local/bin/siege /usr/local/bin/siege.config /usr/local/bin/
 RUN apk add --no-cache \
-    mysql-client postgresql-client curl netcat-openbsd net-tools ca-certificates \
+    mysql-client postgresql-client curl netcat-openbsd net-tools ca-certificates wireguard-tools \
     && rm -rf /var/cache/apk/* \
     siege.config
-
-RUN apk --no-cache add wireguard-tools
